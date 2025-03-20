@@ -62,9 +62,45 @@ h2{
 }
 
 table td{
-    padding: 10px 15px;
+    padding-inline: 25px;
+    align-items: center;
 }
+
+table tr th{
+    text-align: center;
+}
+
 
 .p {
     text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+.laranja{
+    background-color: orange;
+}
+
+.azul{
+    background-color: rgb(2, 2, 163);
+    color: white;
+}
+
+.preta{
+    background-color: black;
+    color: white;
+}
+
+.roxo{
+    background-color: rgb(183, 69, 183);
+}
+
+.verde{
+    background-color: rgb(6, 187, 6);
+}
+
+.vermelho{
+    background-color: rgb(240, 30, 30);
 }
