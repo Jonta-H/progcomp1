@@ -104,3 +104,7 @@ table {
 .vermelho{
     background-color: rgb(240, 30, 30);
 }
+
+.campos{
+    margin: 20px;
+}
