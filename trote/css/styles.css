@@ -105,6 +105,14 @@ table {
     background-color: rgb(240, 30, 30);
 }
 
+.cinza{
+    background-color: rgb(167, 165, 165);
+}
+
+.azulclaro{
+    background-color: rgba(181, 206, 230, 0.541);
+}
+
 .campos{
     margin: 20px;
 }
