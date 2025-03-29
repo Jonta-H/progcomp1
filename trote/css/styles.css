@@ -113,6 +113,14 @@ table {
     background-color: rgba(181, 206, 230, 0.541);
 }
 
+.bege{
+    background-color: beige;
+}
+
+.semicone{
+    list-style: none;
+}
+
 .campos{
     margin: 20px;
 }
