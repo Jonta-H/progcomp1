@@ -28,6 +28,51 @@ nav{
     gap: 15px;
 }
 
+.footerfix{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #3ead58;
+    color: white;
+    font-size: medium;
+    padding-top: 10px;
+    position: fixed;
+    height: 85px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.footerfix img{
+    width: 30px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+footer{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: #3ead58;
+    color: white;
+    font-size: medium;
+}
+
+.footer{
+    padding-top: 10px;
+    height: 85px;
+    
+}
+
+.footer img{
+    width: 30px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
 nav a{
     color: white;
     text-decoration: none; /* tira decoração do link */
@@ -61,48 +106,104 @@ h2{
     text-align: center;
 }
 
-table td{
-    padding-inline: 25px;
-    align-items: center;
-}
-
-table tr th{
+.tablecenter{
     text-align: center;
 }
 
+.tablesangue{
+    text-align: center;
+}
+
+.tablesangue td{
+    padding-inline: 80px;
+}
+
+.tablecenter li{
+    list-style: none;
+    margin-left: -50px;
+
+}
+
+table td{
+    padding-inline: 25px;
+}
+
+table th{
+    padding-inline: 25px;
+    text-align: center;
+}
+
+ul li{
+    text-align: justify;
+}
+
+ol li{
+    text-align: justify;
+}
 
 .p {
     text-align: center;
 }
 
+.tablealinhado table{
+    margin: -25px 0 15px;
+}
+
 table {
     margin: 0 auto;
+    border-spacing: 0;
 }
 
 .laranja{
     background-color: orange;
+    font-weight: bold;
+}
+
+#laranja{
+    color: orange;
 }
 
 .azul{
     background-color: rgb(2, 2, 163);
     color: white;
+    font-weight: bold;
 }
 
 .preta{
     background-color: black;
     color: white;
+    font-weight: bold;
+}
+
+#preto{
+    color: black;
 }
 
 .roxo{
     background-color: rgb(183, 69, 183);
+    font-weight: bold;
+}
+
+#roxo{
+    color: rgb(183, 69, 183);
 }
 
 .verde{
     background-color: rgb(6, 187, 6);
+    font-weight: bold;
+}
+
+#verde{
+    color: rgb(6, 187, 6);
 }
 
 .vermelho{
     background-color: rgb(240, 30, 30);
+    font-weight: bold;
+}
+
+#vermelho{
+    color: rgb(240, 30, 30);
 }
 
 .cinza{
@@ -125,7 +226,7 @@ table {
     margin: 20px;
 }
 
-ul li ul li{
+.circlelist{
     list-style: circle;
 }
 
@@ -141,12 +242,27 @@ ol li{
     content: " ✓ ";
 }
 
-.arrowlist{
+.arrowlist li{
     list-style: none;
 }
 
 .arrowlist li:before{
     content: " ➔ ";
+}
+
+.sublist li{
+    list-style: circle;
+}
+
+.sublist li:before{
+    content: none;
+}
+.sublist li ul li{
+    list-style: none;
+}
+
+.sublist li ul li:before{
+    content: "- ";
 }
 
 .hifem li{
@@ -165,3 +281,4 @@ h3:before{
     text-align: center;
     margin-bottom: 0;
 }
+
