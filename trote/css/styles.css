@@ -282,3 +282,15 @@ h3:before{
     margin-bottom: 0;
 }
 
+.calculadora{
+    margin: 0 auto;
+    width: 450px;
+}
+
+.calculadora input{
+    float: right
+}
+
+.campos button{
+    margin: 0 100px
+}

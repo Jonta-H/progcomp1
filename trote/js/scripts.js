@@ -1,18 +1,20 @@
 function calcular(){
     let soma = 0
     let pontosKitSupl = 0
+    let pontosdoacao = 0
     //declaração de variável sem tipo
     //recupera a cor da equipe
     
     //recupera o valor da ação social digitado
     let acaosocial = Number(document.getElementById("acaosocial").value)
-    soma = soma + Number(acaosocial)
+    soma += Number(acaosocial)
     //recupe o valor da homenagem digitado
     let homenagem = Number(document.getElementById("homenagem").value)
-    soma = soma + Number(homenagem)
+    soma += Number(homenagem)
 
     let leite = Number(document.getElementById("leite").value)
-    soma = soma + (2 *leite)
+    soma += 2 * leite
+
     let suplemento = Number(document.getElementById("suplemento").value)
     let equipe = document.getElementById("equipe").value
     let kit = Number(document.getElementById("kit").value)
@@ -91,20 +93,72 @@ function calcular(){
             pontosKitSupl = 1000 + ((kit - 19) * 30 + (suplemento - 9) * 15)
         }
     }
-
-    let doacao 
-
-
-    
-
-
     soma += pontosKitSupl
 
+    let doacao = Number(document.getElementById("doacao").value)
+    
+    if (equipe == "laranja"){
+        if (doacao >= 49){
+            pontosdoacao = 2500 + (doacao - 49) * 20
+        } else {
+            pontosdoacao = doacao * 20
+        }
+    }
+
+    if (equipe == "preta"){
+        if (doacao >= 52){
+            pontosdoacao = 2500 + (doacao - 52) * 20
+        } else {
+            pontosdoacao = doacao * 20
+        }
+    }
+
+    if (equipe == "roxa"){
+        if (doacao >= 51){
+            pontosdoacao = 2500 + (doacao - 51) * 20
+        } else {
+            pontosdoacao = doacao * 20
+        }
+    }
+
+    if (equipe == "verde"){
+        if (doacao >= 44){
+            pontosdoacao = 2500 + (doacao - 44) * 20
+        } else {
+            pontosdoacao = doacao * 20
+        }
+    }
+
+    if (equipe == "vermelha"){
+        if (doacao >= 47){
+            pontosdoacao = 2500 + (doacao - 47) * 20
+        } else {
+            pontosdoacao = doacao * 20
+        }
+    }
+
+    soma += pontosdoacao
+
     let arroz = document.getElementById("arroz").value
-    soma = soma + Number(arroz)
+    soma += Number(arroz)
 
     let feijao = document.getElementById("feijao").value
-    soma = soma + Number(feijao)
+    soma += Number(feijao)
+
+    let macarrao = document.getElementById("macarrao").value
+    soma += Number(macarrao / 2)
+
+    let oleo = document.getElementById("oleo").value
+    soma += Number(oleo)
+
+    let audiovisual = document.getElementById("audiovisual").value
+    soma += Number(audiovisual)
+
+    let mascote = document.getElementById("mascote").value
+    soma += Number(mascote)
+
+    let animacao = document.getElementById("animacao").value
+    soma += Number(animacao)
 
     //soma os valores
     //devolve o resultado para o HTML
