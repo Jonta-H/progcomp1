@@ -34,65 +34,65 @@ function calcular(){
         }
     } 
     
-    if (equipe == "preta"){
-        if (kit >= 103 && suplemento >= 52){
-            pontosKitSupl = 5000 + ((kit - 103) * 30 + (suplemento - 52) * 15)
+        else if (equipe == "preta"){
+            if (kit >= 103 && suplemento >= 52){
+                pontosKitSupl = 5000 + ((kit - 103) * 30 + (suplemento - 52) * 15)
+            }
+            else if (kit >= 82 && suplemento >= 42){
+                pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 42) * 15)
+            }
+            else if (kit >= 52 && suplemento >= 26){
+                pontosKitSupl = 2500 + ((kit - 52) * 30 + (suplemento - 26) * 15)
+            }
+            else if (kit >= 21 && suplemento >= 10){
+                pontosKitSupl = 1000 + ((kit - 21) * 30 + (suplemento - 10) * 15)
+            }
         }
-        else if (kit >= 82 && suplemento >= 42){
-            pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 42) * 15)
-        }
-        else if (kit >= 52 && suplemento >= 26){
-            pontosKitSupl = 2500 + ((kit - 52) * 30 + (suplemento - 26) * 15)
-        }
-        else if (kit >= 21 && suplemento >= 10){
-            pontosKitSupl = 1000 + ((kit - 21) * 30 + (suplemento - 10) * 15)
-        }
-    }
 
-    if (equipe == "roxa"){
-        if (kit >= 102 && suplemento >= 51){
-            pontosKitSupl = 5000 + ((kit - 102) * 30 + (suplemento - 51) * 15)
+        else if (equipe == "roxa"){
+            if (kit >= 102 && suplemento >= 51){
+                pontosKitSupl = 5000 + ((kit - 102) * 30 + (suplemento - 51) * 15)
+            }
+            else if (kit >= 82 && suplemento >= 41){
+                pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 41) * 15)
+            }
+            else if (kit >= 51 && suplemento >= 26){
+                pontosKitSupl = 2500 + ((kit - 51) * 30 + (suplemento - 26) * 15)
+            }
+            else if (kit >= 20 && suplemento >= 10){
+                pontosKitSupl = 1000 + ((kit - 20) * 30 + (suplemento - 10) * 15)
+            }
         }
-        else if (kit >= 82 && suplemento >= 41){
-            pontosKitSupl = 4000 + ((kit - 82) * 30 + (suplemento - 41) * 15)
-        }
-        else if (kit >= 51 && suplemento >= 26){
-            pontosKitSupl = 2500 + ((kit - 51) * 30 + (suplemento - 26) * 15)
-        }
-        else if (kit >= 20 && suplemento >= 10){
-            pontosKitSupl = 1000 + ((kit - 20) * 30 + (suplemento - 10) * 15)
-        }
-    }
 
-    if (equipe == "verde"){
-        if (kit >= 88 && suplemento >= 44){
-            pontosKitSupl = 5000 + ((kit - 88) * 30 + (suplemento - 44) * 15)
+        else if (equipe == "verde"){
+            if (kit >= 88 && suplemento >= 44){
+                pontosKitSupl = 5000 + ((kit - 88) * 30 + (suplemento - 44) * 15)
+            }
+            else if (kit >= 70 && suplemento >= 35){
+                pontosKitSupl = 4000 + ((kit - 70) * 30 + (suplemento - 35) * 15)
+            }
+            else if (kit >= 44 && suplemento >= 22){
+                pontosKitSupl = 2500 + ((kit - 44) * 30 + (suplemento - 22) * 15)
+            }
+            else if (kit >= 18 && suplemento >= 9){
+                pontosKitSupl = 1000 + ((kit - 18) * 30 + (suplemento - 9) * 15)
+            }
         }
-        else if (kit >= 70 && suplemento >= 35){
-            pontosKitSupl = 4000 + ((kit - 70) * 30 + (suplemento - 35) * 15)
-        }
-        else if (kit >= 44 && suplemento >= 22){
-            pontosKitSupl = 2500 + ((kit - 44) * 30 + (suplemento - 22) * 15)
-        }
-        else if (kit >= 18 && suplemento >= 9){
-            pontosKitSupl = 1000 + ((kit - 18) * 30 + (suplemento - 9) * 15)
-        }
-    }
 
-    if (equipe == "vermelha"){
-        if (kit >= 93 && suplemento >= 47){
-            pontosKitSupl = 5000 + ((kit - 93) * 30 + (suplemento - 47) * 15)
+        else {
+            if (kit >= 93 && suplemento >= 47){
+                pontosKitSupl = 5000 + ((kit - 93) * 30 + (suplemento - 47) * 15)
+            }
+            else if (kit >= 74 && suplemento >= 38){
+                pontosKitSupl = 4000 + ((kit - 74) * 30 + (suplemento - 38) * 15)
+            }
+            else if (kit >= 47 && suplemento >= 24){
+                pontosKitSupl = 2500 + ((kit - 47) * 30 + (suplemento - 24) * 15)
+            }
+            else if (kit >= 19 && suplemento >= 9){
+                pontosKitSupl = 1000 + ((kit - 19) * 30 + (suplemento - 9) * 15)
+            }
         }
-        else if (kit >= 74 && suplemento >= 38){
-            pontosKitSupl = 4000 + ((kit - 74) * 30 + (suplemento - 38) * 15)
-        }
-        else if (kit >= 47 && suplemento >= 24){
-            pontosKitSupl = 2500 + ((kit - 47) * 30 + (suplemento - 24) * 15)
-        }
-        else if (kit >= 19 && suplemento >= 9){
-            pontosKitSupl = 1000 + ((kit - 19) * 30 + (suplemento - 9) * 15)
-        }
-    }
     soma += pontosKitSupl
 
     let doacao = Number(document.getElementById("doacao").value)
@@ -105,7 +105,7 @@ function calcular(){
         }
     }
 
-    if (equipe == "preta"){
+    else if (equipe == "preta"){
         if (doacao >= 52){
             pontosdoacao = 2500 + (doacao - 52) * 20
         } else {
@@ -113,7 +113,7 @@ function calcular(){
         }
     }
 
-    if (equipe == "roxa"){
+    else if (equipe == "roxa"){
         if (doacao >= 51){
             pontosdoacao = 2500 + (doacao - 51) * 20
         } else {
@@ -121,7 +121,7 @@ function calcular(){
         }
     }
 
-    if (equipe == "verde"){
+    else if (equipe == "verde"){
         if (doacao >= 44){
             pontosdoacao = 2500 + (doacao - 44) * 20
         } else {
@@ -129,7 +129,7 @@ function calcular(){
         }
     }
 
-    if (equipe == "vermelha"){
+    else {
         if (doacao >= 47){
             pontosdoacao = 2500 + (doacao - 47) * 20
         } else {
