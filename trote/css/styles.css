@@ -51,18 +51,14 @@ nav{
     margin-bottom: -10px;
 }
 
-footer{
+.footer{
+    padding-top: 10px;
+    height: 85px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     background-color: #3ead58;
     color: white;
     font-size: medium;
-}
-
-.footer{
-    padding-top: 10px;
-    height: 85px;
-    
 }
 
 .footer img{
