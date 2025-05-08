@@ -33,3 +33,21 @@ function pesquisaSatisfacao(){
     let media = soma / 10 // calcula a média das notas
     alert(`Satisfeitos: ${satisfeitos}\nInsatisfeitos: ${insatisfeito}\nMédia: ${media.toFixed(1)}`)
 }
+
+function grupoValores(){
+    let grupo = 1
+    while (grupo <= 5){
+        let a = Number(prompt("Informe o primeiro valor"))
+        let b = Number(prompt("Informe o segundo valor"))
+        let c = Number(prompt("Informe o terceiro valor"))
+        let d = Number(prompt("Informe o quarto valor"))
+        alert(`${a} ${b} ${c} ${d}`)
+        if (a > b && a > c && a > d){
+            if(b > c && b > d){
+                if(c > d){
+                    alert(`${}`)
+                }
+            }
+        }
+    }
+}
