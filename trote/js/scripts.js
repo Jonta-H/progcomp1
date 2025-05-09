@@ -3,7 +3,7 @@ function calcular(){
     let pontosKitSupl = 0
     let pontosdoacao = 0
     //declaração de variável sem tipo
-    //recupera a cor da equipe
+    
     
     //recupera o valor da ação social digitado
     let acaosocial = Number(document.getElementById("acaosocial").value)
@@ -16,6 +16,7 @@ function calcular(){
     soma += 2 * leite
 
     let suplemento = Number(document.getElementById("suplemento").value)
+    //recupera a cor da equipe
     let equipe = document.getElementById("equipe").value
     let kit = Number(document.getElementById("kit").value)
     

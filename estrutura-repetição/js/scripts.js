@@ -34,20 +34,69 @@ function pesquisaSatisfacao(){
     alert(`Satisfeitos: ${satisfeitos}\nInsatisfeitos: ${insatisfeito}\nMédia: ${media.toFixed(1)}`)
 }
 
-function grupoValores(){
+function exercicio1(){
+    let valores = 1
+    let valor1
+    let valor2
+    let valor3
+    let valor4
+    let grupo1 = 0
+    let grupo2 = 0
+    let grupo3 = 0
+    let grupo4 = 0
+    let grupo5 = 0
     let grupo = 1
-    while (grupo <= 5){
-        let a = Number(prompt("Informe o primeiro valor"))
-        let b = Number(prompt("Informe o segundo valor"))
-        let c = Number(prompt("Informe o terceiro valor"))
-        let d = Number(prompt("Informe o quarto valor"))
-        alert(`${a} ${b} ${c} ${d}`)
-        if (a > b && a > c && a > d){
-            if(b > c && b > d){
-                if(c > d){
-                    alert(`${}`)
-                }
-            }
+
+    while(valores <= 5){
+        valor1 = Number(prompt(`Informe um número para o grupo ${grupo}`))
+        valor2 = Number(prompt(`Informe um número para o grupo ${grupo}`))
+        valor3 = Number(prompt(`Informe um número para o grupo ${grupo}`))
+        valor4 = Number(prompt(`Informe um número para o grupo ${grupo}`))
+        if (grupo1 == 0){
+            grupo1 = [valor1, valor2, valor3, valor4]
+        } else if (grupo2 == 0){
+            grupo2 = [valor1, valor2, valor3, valor4]
+        } else if (grupo3 == 0){
+            grupo3 = [valor1, valor2, valor3, valor4]
+        } else if (grupo4 == 0){
+            grupo4 = [valor1, valor2, valor3, valor4]
+        } else{
+            grupo5 = [valor1, valor2, valor3, valor4]
         }
+        grupo++
+        valores++      
     }
+    alert(`Grupo 1: ${grupo1}\nGrupo 2: ${grupo2}\nGrupo 3: ${grupo3}\nGrupo 4: ${grupo4}\nGrupo 5: ${grupo5}`)
+    grupo1.sort(function(a,b){
+        return a - b
+    })
+    grupo2.sort(function(a,b){
+        return a - b
+    })
+    grupo3.sort(function(a,b){
+        return a - b
+    })
+    grupo4.sort(function(a,b){
+        return a - b
+    })
+    grupo5.sort(function(a,b){
+        return a - b
+    })
+    alert(`Ordem crescente:\nGrupo 1: ${grupo1}\nGrupo 2: ${grupo2}\nGrupo 3: ${grupo3}\nGrupo 4: ${grupo4}\nGrupo 5: ${grupo5}`)
+    grupo1.sort(function(a,b){
+        return b - a
+    })
+    grupo2.sort(function(a,b){
+        return b - a
+    })
+    grupo3.sort(function(a,b){
+        return b - a
+    })
+    grupo4.sort(function(a,b){
+        return b - a
+    })
+    grupo5.sort(function(a,b){
+        return b - a
+    })
+    alert(`Ordem decrescente:\nGrupo 1: ${grupo1}\nGrupo 2: ${grupo2}\nGrupo 3: ${grupo3}\nGrupo 4: ${grupo4}\nGrupo 5: ${grupo5}`)
 }
