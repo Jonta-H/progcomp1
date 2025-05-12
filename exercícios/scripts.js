@@ -19,6 +19,29 @@ let media = soma / 10
     alert(`Total de participantes: ${participantes-1} \n` + `Participantes satisfeitos: ${satisfeito} \n` + `Participantes insatisfeitos: ${insatisfeito} \n` + `Média das notas: ${media}`)
 }
 
+function exe1(){
+    let a, b, c, d, aux
+    let conta = 1
+    a = Number(prompt(`Informe o valor de A`))
+    b = Number(prompt(`Informe o valor de B`))
+    c = Number(prompt(`Informe o valor de C`))
+    d = Number(prompt(`Informe o valor de D`))
+    while(conta <= 3){
+        if (a > b){
+            aux = a; a = b; b = aux
+        } 
+        if (b > c){
+            aux = b; b = c; c = aux
+        }
+        if (c > d){
+            aux = c; c = d; d = aux
+        }
+        conta++
+    }
+    alert(`Ordem crescente: ${a}, ${b}, ${c}, ${d}`)
+    alert(`Ordem decrescente: ${d}, ${c}, ${b}, ${a}`)
+}
+
 function exercicio1(){
     let cont = 1
     let qntValores = 0
