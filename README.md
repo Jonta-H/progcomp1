@@ -1,2 +1,2 @@
 <h1>Progcomp1</h1>
-<p>Repositório destinado ao arquivo das atividades realizadas durante o primeiro semestre de Programação de Computadores I.</p>
+<p>Repositório destinado ao armazenamento das atividades desenvolvidas durante o primeiro semestre da disciplina Programação de Computadores I, pertencente à grade curricular do curso de Sistemas de Informação.</p>
