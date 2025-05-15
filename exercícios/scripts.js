@@ -95,12 +95,22 @@ function exercicio2(){
     let preco = 5
     let ingressos = 120
     let lucro
+    let aux = ""
+    let maiorLucro = 0, precoMaior = 0, ingressosMaior = 0
 
-    for (preco; preco >= 1; preco -= 0.5){
+    while (preco >= 1){
         lucro = (preco * ingressos) - 200
-        alert(`${preco}\n${ingressos}\n${lucro}`)
+        if(lucro > maiorLucro){
+            maiorLucro = lucro
+            precoMaior = preco
+            ingressosMaior = ingressos
+        }
+        aux = aux + "\n" + (`Preço: ${preco} - Ingressos: ${ingressos} - Lucro: ${lucro}`)
         ingressos += 26
+        preco -= 0.5
     }
+    alert(aux)
+    alert(`Maior lucro: ${maiorLucro} - Preço: ${precoMaior} - Qtde Ingressos: ${ingressosMaior}`)
 }
 
 function exercicio3(){
@@ -139,3 +149,4 @@ function exercicio3(){
         `\nAcima de 60 anos: ${faixa5} = ${((faixa5/8)*100).toFixed(1)}%`
     )
 }
+
