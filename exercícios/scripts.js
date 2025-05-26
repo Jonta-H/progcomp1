@@ -164,6 +164,14 @@ function exe4(){
     alert(tabuada)
 }
 
+function exe44(){
+    let numero = Number(prompt(`Informe um número`))
+
+    for(let i = 0; i <= 10; i++){
+        console.log(`${numero} x ${i} = ${numero*i}`)
+    }
+}
+
 function exe5(){
     let n, cont, result
 
@@ -175,6 +183,15 @@ function exe5(){
             
         }
        alert(tabuada) 
+    }
+}
+
+function exe55(){
+    for(let i = 1; i <= 10; i++){
+        for(let mult = 0; mult <= 10; mult++){
+            console.log(`${i} * ${mult} = ${i*mult}`)
+        }
+        console.log(`------------------------`)
     }
 }
 
@@ -206,4 +223,8 @@ function exe6(){
         + `Valor total das compras efetuadas: R$${valorTotal}\n`
         + `Valor da primeira prestação a prazo: R$${(P/3).toFixed(2)}`
     )
+}
+
+function exe66(){
+    
 }
