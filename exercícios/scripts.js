@@ -199,8 +199,8 @@ function exe6(){
     let V = 0, P = 0, valor, cont, opcao, valorTotal
 
     for(cont = 1; cont <= 15; cont++){
-        opcao = prompt("V = à vista\nP = a prazo")
-            if(opcao != "V" && opcao != "v" && opcao != "P" && opcao != "p"){
+        opcao = prompt("V = à vista\nP = a prazo").toUpperCase()
+            if(opcao != "V" && opcao != "P"){
                 alert("Informe uma opção válida")
                 cont--
                 continue
@@ -211,7 +211,7 @@ function exe6(){
                 cont--
                 continue
             }
-        if(opcao === "V" || opcao === "v"){
+        if(opcao == "V"){
             V+= valor
         } else{
             P+= valor
@@ -225,6 +225,35 @@ function exe6(){
     )
 }
 
-function exe66(){
+function exe7(){
+    let idade, altura, peso, faixa1 = 0, faixa2 = 0, somaAltura = 0, pesoInf = 0
+
+    for(let conta = 0; conta < 5; conta++){
+        do{
+            idade = Number(prompt("Informe a idade"))
+        } while(idade < 0)
     
+        do{
+            altura = Number(prompt(`Informe a altura`))
+        } while(altura < 0)
+    
+        do{
+            peso = Number(prompt(`Informe o peso`))
+        } while(peso < 0)  
+        
+        if(idade > 50){
+            faixa2++
+        } else if(idade >= 10 && idade <= 20){
+            somaAltura+= altura
+            faixa1++
+        }
+        
+        if(peso < 40){
+            pesoInf++
+        }
+    }
+
+    console.log(`Pessoas com mais de 50 anos: ${faixa2}\n` +
+                `Média de altura: ${somaAltura/faixa1}\n` +
+                `Porcentagem com peso inferior a 40kg: ${(pesoInf/5)*100}`)
 }
