@@ -257,3 +257,115 @@ function exe7(){
                 `Média de altura: ${somaAltura/faixa1}\n` +
                 `Porcentagem com peso inferior a 40kg: ${(pesoInf/5)*100}`)
 }
+
+function exe8(){
+    let idades, pesos, alturas, corOlhos, corCabelos, idade50peso60 = 0, pessoasMenos150 = 0, idadeMenos150 = 0, olhoAzul = 0, ruivaNaoAzul = 0, tabela = "Idade - Peso - Altura - CorOlhos - CorCabelo"
+
+    for(let i = 0; i < 6; i++){
+        do{
+            idades = Number(prompt(`Informe a idade da ${i + 1}ª pessoa`))
+        }while(idades <= 0)
+        do{
+            pesos = Number(prompt(`Informe o peso da ${i + 1}ª pessoa`))
+        }while(pesos <= 0)
+        do{
+            alturas = Number(prompt(`Informe a altura(m) da ${i + 1}ª pessoa`)).toFixed(2)
+        }while(alturas <= 0)
+        do{
+            corOlhos = prompt(`Informe a cor dos olhos da ${i + 1}ª pessoa\n` +
+                                    `A - Azul; P - Preto; V - Verde; C - Castanho` ).toUpperCase()
+        }while(corOlhos != "A" && corOlhos != "P" && corOlhos != "V" && corOlhos != "C")
+        do{
+            corCabelos = prompt(`Informe a cor do cabelo da ${i + 1}ª pessoa\n` +
+                                    `R - Ruivo; P - Preto; L - Loiro; C - Castanho` ).toUpperCase()
+        }while(corCabelos != "R" && corCabelos != "P" && corCabelos != "L" && corCabelos != "C")
+        if(idades > 50 && pesos < 60){
+            idade50peso60++
+        }
+        if(alturas < 1.5){
+            pessoasMenos150++
+            idadeMenos150+= idades
+        }
+        if(corOlhos == `A`){
+            olhoAzul++
+        } else if(corCabelos == `R`){
+            ruivaNaoAzul++
+        }
+        tabela+= `\n${idades}\t\t${pesos}\t\t${alturas}\t\t${corOlhos}\t\t${corCabelos}`
+    }
+
+    console.log(tabela)
+
+    console.log(`Pessoas com idade superior a 50 e peso inferior a 60kg: ${idade50peso60}\n`+
+                `Média de idade das pessoas de altura inferior a 1,50m: ${(idadeMenos150/pessoasMenos150).toFixed(0)}\n`+
+                `Porcentagem de pessoas com olhos azuis: ${(olhoAzul/6*100).toFixed(0)}%\n`+
+                `Quantidade pessoas ruivas e olhos não azuis: ${ruivaNaoAzul}`
+    )
+}
+
+function exe9(){
+    let idades, pesos, alturas, sup90kgInf150m = 0, entre10e30anos = 0, mais190m = 0, somaIdades = 0
+    let tabela = "Idade - Peso - Altura"
+
+    for(let i = 0; i < 10; i++){
+        do{
+            idades = Number(prompt(`Informe a idade da ${i+1}ª pessoa: `))
+        } while(idades < 0)
+        do{
+            pesos = Number(prompt(`Informe o peso da ${i+1}ª pessoa: `))
+        } while(pesos < 0)
+        do{
+            alturas = Number(prompt(`Informe a altura(m) da ${i+1}ª pessoa: `)).toFixed(2)
+        } while(alturas < 0)
+
+        tabela+= `\n${idades}\t\t${pesos}\t\t${alturas}`
+
+        somaIdades+= idades
+
+        if(alturas > 1.9){
+            mais190m++
+            if(idades > 10 && idades < 30){
+                entre10e30anos++
+        }
+        } else if(pesos > 90 && alturas < 1.5){
+            sup90kgInf150m++
+        }
+    }
+
+    console.log(tabela)
+    console.log(`Média de idade: ${somaIdades/10}\n`+
+                `Pessoas com peso sup. a 90kg e altura inf. 1.50m: ${sup90kgInf150m}\n`+
+                `% pessoas entre 10 e 30 anos entre as pesoas com mais de 1.90m: ${(entre10e30anos/mais190m*100).toFixed(0)}%`
+    )
+}
+
+function exe10(){
+    let nums, somaPares = 0, somaPrimos = 0, tabela = "Par - Primo - Outro"
+
+    for(let i = 0; i < 10; i++){
+        nums = Number(prompt(`Informe o ${i+1}º número`))
+        if(nums != 2 && nums % 2 == 0){
+            somaPares+= nums
+            tabela+= `\n${nums}\t\t-\t\t-`
+        } else{
+            let div = 0
+            for(let aux = nums; aux > 0; aux--){
+                if(nums % aux == 0){
+                    div++
+                }
+            }
+            if(div == 2){
+                somaPrimos+= nums
+                tabela+= `\n-\t\t${nums}\t\t-`
+            } else{
+                tabela+= `\n-\t\t-\t\t${nums}`
+            }
+            
+        }
+    }
+
+    console.log(tabela)
+    console.log(`Soma dos números pares: ${somaPares}\n`+
+                `Soma dos números primos: ${somaPrimos}`
+    )
+}
