@@ -18,7 +18,7 @@ function exe1(){
                 `Quantidade de impares: ${impares.length}`)
 }
 
-function exe(){
+function exe2(){
     let nums = []
 
     for(let i = 0; i < 10; i++){
@@ -36,3 +36,25 @@ function exe(){
     console.log(nums)
     
 }
+
+function exe3(){
+    let opiniao = [], gostouMT = 0, gostou = 0, naoGostou = 0
+    
+    for(let i = 0; i < 10; i++){
+        do{
+            opiniao[i] = Number(prompt(`Pesquisa de opinião ${i+1}\n1 - Gostei muito\n2 - Gostei\n3 - Não gostei`))
+        } while(opiniao[i] != 1 && opiniao[i] != 2 && opiniao[i] != 3)
+        if(opiniao[i] == 1){
+            gostouMT++
+        } else if(opiniao[i] == 2){
+            gostou++
+        } else{
+            naoGostou++
+        }
+    }
+
+    console.log(`${gostou} pessoas gostaram\n`+
+                `${gostouMT} pessoas gostaram muito\n`+
+                `${naoGostou} pessoas não gostaram. Representando ${(naoGostou/opiniao.length)*100}%`)
+}
+
