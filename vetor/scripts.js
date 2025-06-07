@@ -58,3 +58,71 @@ function exe3(){
                 `${naoGostou} pessoas não gostaram. Representando ${(naoGostou/opiniao.length)*100}%`)
 }
 
+function exe4(){
+    let nums = [], soma = 0
+
+    for(let i = 0; i < 8; i++){
+        nums[i] = Number(prompt(`Informe um numero [${i}]`))
+        soma+= nums[i]
+    }
+
+    let media = soma/8
+    let acimaMedia = []
+
+    for(let i = 0; i < 8; i++){
+        if(nums[i] > media){
+            acimaMedia.push(nums[i])
+        }
+    }
+
+    console.log(`Média: ${(media).toFixed(1)}\n`+
+                `Quantidade acima da média: ${acimaMedia.length}\n`+
+                `Numeros acima da média: ${acimaMedia}`)
+}
+
+function exe5(){
+    let nums = [], maiores = 0, menores = 0, iguais = 0
+
+    for(let i = 0; i < 10; i++){
+        nums[i] = Number(prompt(`Informe um número [${i}]`))
+            if(nums[i] > nums[0]){
+                maiores++
+            } else if(nums[i] < nums[0]){
+                menores++
+            } else{
+                iguais++
+            }
+    }
+
+    console.log(`Maiores que o primeiro: ${maiores}\n`+
+                `Menores que o primeiro: ${menores}\n`+
+                `Iguais: ${iguais}`
+    )
+}
+
+function exe6(){
+    let nums = []
+
+    for(let i = 0; i < 12; i++){
+        nums[i] = Number(prompt(`Número [${i}]`))
+    }
+
+    console.log(nums)
+
+    let search = Number(prompt(`Número a ser buscado`))
+    let posicoes = []
+
+    for(let i = 0; i < 12; i++){
+        if(search == nums[i]){
+            posicoes.push(i)
+        }
+    }
+
+    if(posicoes.length == 0){
+        console.log(`O número não esta no vetor`)
+    }else if(posicoes.length == 1){
+        console.log(`O número aparece ${posicoes.length} vez, na posição ${posicoes}`)
+    }else{
+        console.log(`O número aparece ${posicoes.length} vezes, nas posições ${posicoes}`)
+    }
+}
